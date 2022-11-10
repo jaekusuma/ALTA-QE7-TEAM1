@@ -1,5 +1,7 @@
 package jsonPlaceHolder;
 
+import net.serenitybdd.rest.SerenityRest;
+
 public class jsonPlaceHolderAPI {
     public static final String URL = "https://jsonplaceholder.typicode.com";
     public static final String JSON_REQUEST_BODY = "src/test/resources/features/JsonFile/jsonRequestBody/";
