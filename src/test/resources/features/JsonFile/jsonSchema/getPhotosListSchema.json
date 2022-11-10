@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Welcome1Element"
+  },
+  "definitions": {
+    "Welcome1Element": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "albumId": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ]
+        },
+        "thumbnailUrl": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ]
+        }
+      },
+      "required": [
+        "albumId",
+        "id",
+        "thumbnailUrl",
+        "title",
+        "url"
+      ],
+      "title": "Welcome1Element"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome2",
+  "definitions": {
+    "Welcome2": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ]
+        },
+        "thumbnailUrl": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ]
+        },
+        "id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "thumbnailUrl",
+        "title",
+        "url"
+      ],
+      "title": "Welcome2"
+    }
+  }
+}
