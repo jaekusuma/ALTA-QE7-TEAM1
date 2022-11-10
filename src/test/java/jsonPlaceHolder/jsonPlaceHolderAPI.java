@@ -2,6 +2,7 @@ package jsonPlaceHolder;
 
 import net.serenitybdd.rest.SerenityRest;
 
+
 public class jsonPlaceHolderAPI {
     public static final String URL = "https://jsonplaceholder.typicode.com";
     public static final String JSON_REQUEST_BODY = "src/test/resources/features/JsonFile/jsonRequestBody/";
@@ -13,7 +14,7 @@ public class jsonPlaceHolderAPI {
 
     public static String COMMENTS_LIST = URL + "/comments";
     public static String COMMENTS_SINGLE = URL + "/comments/{id}";
-    public static String COMMENTS_PER_USER_ID = URL + "/comments?postId?={id}";
+    public static String COMMENTS_PER_USER_ID = URL + "/comments?postId={id}";
 
     public static String ALBUMS_LIST = URL + "/albums";
     public static String ALBUMS_SINGLE = URL + "/albums/{id}";
@@ -26,4 +27,29 @@ public class jsonPlaceHolderAPI {
     public static String TODOS_LIST = URL + "/todos";
     public static String TODOS_SINGLE = URL + "/todos/{id}";
     public static String TODOS_PER_USER_ID = URL + "/todos?id={id}";
+
+    @Step("Get Comments")
+    public void getComments(int id){
+        SerenityRest.given().pathParam("id",id);
+    }
+    @Step("Post New Comment")
+    public void postNewComment(File json){
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+    @Step("Put Update Comment")
+    public void putUpdateComment(int id, File json){
+        SerenityRest.given()
+                .pathParam("id",id)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+    @Step("Delete Comment")
+    public void deleteComment(int id){
+        SerenityRest.given()
+                .pathParam("id",id);
+    }
 }
+
+
