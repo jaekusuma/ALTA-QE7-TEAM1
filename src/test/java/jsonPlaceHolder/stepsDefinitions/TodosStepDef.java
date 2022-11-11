@@ -29,10 +29,10 @@ public class TodosStepDef {
         SerenityRest.when().get(jsonPlaceHolderAPI.TODOS_SINGLE);
     }
 
-    @Then("Status Code Should be {int} OK")
-    public void statusCodeShouldBeOK(int OK) {
-        SerenityRest.then().statusCode(OK);
-    }
+//    @Then("Status Code Should be {int} OK")
+//    public void statusCodeShouldBeOK(int OK) {
+//        SerenityRest.then().statusCode(OK);
+//    }
 
     @And("Response Body contain by postId {int}")
     public void responseBodyContainByPostId(int id) {

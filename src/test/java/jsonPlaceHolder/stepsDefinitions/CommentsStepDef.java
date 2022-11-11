@@ -117,10 +117,10 @@ public class CommentsStepDef {
         SerenityRest.when().post(jsonPlaceHolderAPI.COMMENTS_LIST);
     }
 
-    @Then("Status code should be {int} Created")
-    public void statusCodeShouldBeCreated(int created) {
-        SerenityRest.then().statusCode(created);
-    }
+//    @Then("Status code should be {int} Created")
+//    public void statusCodeShouldBeCreated(int created) {
+//        SerenityRest.then().statusCode(created);
+//    }
 
     @And("Response body page should contain name {string}, email {string} and body {string}")
     public void responseBodyPageShouldContainNameEmailAndBody(String name, String email, String body) {
@@ -142,10 +142,10 @@ public class CommentsStepDef {
         jsonPHAPI.postNewComment(json);
     }
 
-    @Then("Status code should be {int} Bad Request")
-    public void statusCodeShouldBeBadRequest(int badRequest) {
-        SerenityRest.then().statusCode(badRequest);
-    }
+//    @Then("Status code should be {int} Bad Request")
+//    public void statusCodeShouldBeBadRequest(int badRequest) {
+//        SerenityRest.then().statusCode(badRequest);
+//    }
 
     //Scenario 8
     @Given("Post create new comment with valid json without email")
