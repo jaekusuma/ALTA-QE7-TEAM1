@@ -31,6 +31,31 @@ public class jsonPlaceHolderAPI {
     public static String TODOS_SINGLE = URL + "/todos/{id}";
     public static String TODOS_PER_USER_ID = URL + "/todos?id={id}";
 
+
+    public static String USERS_LIST = URL + "/users";
+    public static String USERS_SINGLE = URL + "/users/{id}";
+    public static String USERS_PER_USER_ID = URL + "/users?id={id}";
+
+    @Step("Post Create User With Valid Email Password")
+    public void postTodosValidEmailPassword(File json) {
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    @Step("Post Create User Without Email")
+    public void postTodosWithoutEmail(File json) {
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+    @Step("Post Create User With Valid Body")
+    public void postTodosValidBody(File json) {
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+    
     @Step("Get Comments")
     public void getComments(int id){
         SerenityRest.given().pathParam("id",id);
@@ -53,4 +78,6 @@ public class jsonPlaceHolderAPI {
         SerenityRest.given()
                 .pathParam("id",id);
     }
-}
+
+    }
+
