@@ -1,6 +1,5 @@
 package jsonPlaceHolder;
 
-
 import io.restassured.http.ContentType;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
@@ -32,6 +31,7 @@ public class jsonPlaceHolderAPI {
     public static String TODOS_SINGLE = URL + "/todos/{id}";
     public static String TODOS_PER_USER_ID = URL + "/todos?id={id}";
 
+
     public static String USERS_LIST = URL + "/users";
     public static String USERS_SINGLE = URL + "/users/{id}";
     public static String USERS_PER_USER_ID = URL + "/users?id={id}";
@@ -55,7 +55,29 @@ public class jsonPlaceHolderAPI {
                 .contentType(ContentType.JSON)
                 .body(json);
     }
-
+    
+    @Step("Get Comments")
+    public void getComments(int id){
+        SerenityRest.given().pathParam("id",id);
+    }
+    @Step("Post New Comment")
+    public void postNewComment(File json){
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+    @Step("Put Update Comment")
+    public void putUpdateComment(int id, File json){
+        SerenityRest.given()
+                .pathParam("id",id)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+    @Step("Delete Comment")
+    public void deleteComment(int id){
+        SerenityRest.given()
+                .pathParam("id",id);
     }
 
+    }
 
