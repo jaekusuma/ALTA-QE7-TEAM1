@@ -33,6 +33,7 @@
 **Test Case Management:**  
 
 ![Google Sheets](https://img.shields.io/badge/-Google%20sheets-4bc47b?style=for-the-badge&logoColor=black)
+
 **Communication:**  
 
 ![GitHub](https://img.shields.io/badge/github%20Project-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
@@ -43,7 +44,7 @@
 
 1. Clone the repository
 ```bash
-  $ git clone https://github.com/ProjectBengcall/web-testing.git
+  $ git clone https://github.com/jaekusuma/ALTA-QE7-TEAM1.git
 ```
 2. Open  this Project Repository on Intellij IDE and Run this on the IDE terminal
 
